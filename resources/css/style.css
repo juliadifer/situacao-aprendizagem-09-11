@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box
+}
+body {
+    background-color: #f2f4f7;
+    color: #333;
+}
+.topo {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.menu button {
+    background-color: #1b5e20;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.menu button:hover {
+    background-color: #388e3c;
+}
+.conteudo {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.secao {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.oculta {
+    display: none;
+}
+.bloco-info {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.caixa-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 5px;
+}
+input,select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.botao-verde {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.lista-dados {
+    margin-top: 10px;
+}
+.item-cartao {
+    background: #f9f9f9;
+    border-left: 4px solid #2e7d32;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}

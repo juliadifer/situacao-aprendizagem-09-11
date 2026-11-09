@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="resources/css/script.js" defer></script>
+</head>
+<body>
+    <div class="topo">
+    <h1>Associação Viva Bairro</h1>
+    <div class="menu">
+      <button onclick="mudarAba('painel')">Painel</button>
+      <button onclick="mudarAba('moradores')">Moradores</button>
+      <button onclick="mudarAba('solicitacoes')">Solicitações</button>
+      <button onclick="mudarAba('eventos')">Eventos</button>
+    </div>
+  </div>
+
+  <div class="conteudo">
+
+    <div id="secao-painel" class="secao">
+      <h2>Painel Geral</h2>
+      <div class="bloco-info">
+        <p>Total de Moradores: <strong id="qtd-moradores">0</strong></p>
+        <p>Solicitações Abertas: <strong id="qtd-solicitacoes">0</strong></p>
+        <p>Eventos Cadastrados: <strong id="qtd-eventos">0</strong></p>
+      </div>
+    </div>
+
+    <div id="secao-moradores" class="secao oculta">
+      <h2>Cadastro de Moradores</h2>
+      
+      <div class="caixa-formulario">
+        <input type="hidden" id="posicao-morador">
+        <input type="text" id="campo-nome" value="Nome Completo">
+        <input type="text" id="campo-cpf" value="CPF">
+        <input type="date" id="campo-nascimento">
+        <input type="text" id="campo-telefone" value="Telefone">
+        <input type="text" id="campo-endereco" value="Endereço">
+        <button class="botao-verde" onclick="salvarMorador()">Salvar</button>
+      </div>
+
+      <h2>Lista de Moradores</h2>
+      <input type="text" id="busca" value="Buscar..." onkeyup="pesquisar()">
+      
+      <div id="lista-moradores" class="lista-dados"></div>
+    </div>
+
+    <div id="secao-solicitacoes" class="secao oculta">
+      <h2>Solicitações</h2>
+      
+      <div class="caixa-formulario">
+        <input type="text" id="solicitacao-cpf" value="CPF do Morador">
+        <select id="solicitacao-tipo">
+          <option value="Manutenção">Manutenção</option>
+          <option value="Assistência">Assistência</option>
+        </select>
+        <input type="text" id="solicitacao-desc" value="Descrição do pedido">
+        <button class="botao-verde" onclick="salvarSolicitacao()">Registrar</button>
+      </div>
+
+      <div id="lista-solicitacoes" class="lista-dados"></div>
+    </div>
+
+    <div id="secao-eventos" class="secao oculta">
+      <h2>Eventos</h2>
+      
+      <div class="caixa-formulario">
+        <input type="text" id="ev-nome" value="Nome do Evento">
+        <input type="date" id="ev-data">
+        <input type="text" id="ev-local" value="Local">
+        <button class="botao-verde" onclick="salvarEvento()">Criar</button>
+      </div>
+
+      <div id="lista-eventos" class="lista-dados"></div>
+    </div>
+
+  </div>
+</body>
+</html>
